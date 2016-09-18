@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+      .red-color { color: red; }
+      .red-border { border: 2px dashed red; }
+      .green-color { color: green; }
+      .green-border { border: 2px solid green; }
+      .blue-color { color: blue; }
+      .blue-border { border: 2px dotted blue; }
+    </style>
+  </head>
+
+<body ng-app="LunchChecker">
+
+   <div class="container" ng-controller="LunchCheckController">
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group">
+             <input id="lunch-menu" type="text"
+             placeholder="Enter comma separated dishes you had for lunch"
+             class="form-control" ng-model="foodInput" ng-class="borderColor">
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default" ng-click="displayNum(); displayMsg();">Check If You Ate Too Much Today
+             </button>
+         </div>
+         <div class="form-group message">
+           <!-- Your message can go here. -->
+           {{msg}}
+         </div>
+   </div>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+   <script src="js/app.js"></script>
+</body>
+</html>
