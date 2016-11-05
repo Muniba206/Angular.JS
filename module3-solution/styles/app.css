@@ -1,0 +1,32 @@
+input, button {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.error {
+  font-size: 1.2em;
+  color: red;
+}
+
+li {
+  margin-bottom: 7px;
+  font-size: 1.2em;
+}
+
+li > button {
+  margin-left: 6px;
+}
+
+button > span {
+  color: green;
+}
+
+button.dontwantbutton {
+  vertical-align: middle;
+  margin-top: auto;
+  margin-right: auto;
+}
+
+div.row {
+  margin-bottom: 10px;
+}

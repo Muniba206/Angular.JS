@@ -1,0 +1,18 @@
+<!-- set up a Bootstrap grid row for the menu items -->
+<div class="row" ng-repeat="item in narrow.found">
+  <div class="col-md-2 col-xs-12">
+    {{ item.name }}
+  </div>
+  <div class="col-md-1 col-xs-12">
+    {{ item.short_name }}
+  </div>
+  <div class="col-md-6 col-xs-12">
+    {{ item.description }}
+  </div>
+  <div class="col-md-3 col-xs-12">
+    <button ng-click="narrow.onRemove({index: $index});" class="btn btn-secondary dontwantbutton">Don't want this one!</button>
+  </div>
+</div>
+<!-- an error div which we display when we can't find anything,
+     or the user deletes all options -->
+<div class="error">Nothing found!</div>
