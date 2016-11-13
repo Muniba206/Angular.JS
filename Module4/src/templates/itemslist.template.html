@@ -1,0 +1,6 @@
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="item in $ctrl.items">
+    <h4>{{ $index + 1 }}. {{ item.name }} <i>&#36;{{ item.price_large }}</i></h4>
+    {{ item.description }}
+  </li>
+</ul>
